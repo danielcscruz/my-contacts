@@ -71,11 +71,18 @@ const contactSlice = createSlice({
           },
         selectContact: (state, action: PayloadAction<Contact>) => {
             state.selectedContact = action.payload;
-          }
+          },
+          updateSelectedContact: (state, action: PayloadAction<Partial<Contact>>) => {
+            if (state.selectedContact) {
+                state.selectedContact = { ...state.selectedContact, ...action.payload };
+            } else {
+                state.selectedContact = { id: 0, name: "", email: "", phone: 0, category: "" , ...action.payload };
+            }
+        }
     }
 })
 
-export const { setContacts, selectContact } = contactSlice.actions
+export const { setContacts, selectContact, updateSelectedContact } = contactSlice.actions
 
 export default contactSlice.reducer
 

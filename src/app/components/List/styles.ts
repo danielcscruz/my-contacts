@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
+export const Container = styled.div`
+    height: 500px;
+`
+
 export const Names = styled.div`
     margin: 24px 0;
     font-size: 20px;
     max-width: 400px;
     width: 100%;
-    max-height: 55vh;
+    height: 400px;
     overflow-y: scroll;
     cursor: pointer;
 `
