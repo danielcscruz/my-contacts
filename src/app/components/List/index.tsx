@@ -12,7 +12,6 @@ const List = () => {
 
     const handleSelectContact = (contact: Contact) => {
         dispatch(selectContact(contact))
-        console.log('Contato selecionado: ', contact)
     }
 
     const filteredContacts = contacts.filter(contact => 

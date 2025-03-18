@@ -6,8 +6,21 @@ export const Button = styled.button`
     margin: 0 5px;
     border: none;
     background-color: #000;
-    color:rgb(208, 204, 204);
+    color:#fff;
     cursor: pointer;
+    border: 1px solid #000;
+    &:hover {
+        background-color: transparent;
+        color: #000;
+        border:
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        color: #000;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
 ` 
 export const ButtonX = styled.button`
     height: 50px;
@@ -17,9 +30,13 @@ export const ButtonX = styled.button`
     background-color: transparent;
     color: #000;
     cursor: pointer;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
 ` 
 
-export const ButtonCont = styled.div`
+export const ButtonCont = styled.form`
     padding: 10px 0;
     border-top: 1px solid #000;
     text-decoration: none;

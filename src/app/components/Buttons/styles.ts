@@ -8,6 +8,15 @@ export const Button = styled.button`
     background-color: #000;
     color:rgb(208, 204, 204);
     cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    &:disabled {
+        display: none;
+    }
 ` 
 
 export const ButtonCont = styled.div`
