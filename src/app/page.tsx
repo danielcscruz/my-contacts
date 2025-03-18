@@ -1,24 +1,31 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
-import { usePathname } from "next/navigation";
 import store from './store'
 import ContactCard from './components/ContactCard'
 import Buttons from './components/Buttons'
 import { MainPage } from './styles'
-import Index from './pages/'
-import Register from './pages/'
+import List from './components/List';
 
 
 export default function Home() {
-  const pathname = usePathname();
-  
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // Delay rendering until styles are loaded
+    const timeout = setTimeout(() => setIsClient(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (!isClient) return null; // Prevent rendering until the delay is over
+
   return (
     <Provider store={store}>
       <MainPage>
         <ContactCard />
-        {pathname === "/" && <Index/>}
-        {pathname === "/new" && <Register/>}
+          <List />
         <Buttons />
       </MainPage>
     </Provider>

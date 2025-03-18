@@ -29,6 +29,4 @@ export const Phone = styled.h5`
     font-size: 28px;
     border: 1px solid #000;
     padding: 5px 5px;
-
-
 `
