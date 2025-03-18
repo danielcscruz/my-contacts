@@ -27,7 +27,7 @@ const ContactCard = () => {
                     <>
                     <Title>My Contacts</Title>
                     <Cat>check this project repo on:</Cat>
-                    <Email>https://github.com/danielcscruz/agenda</Email>
+                    <Email>github.com/danielcscruz/my-contacts</Email>
                     <Phone>:)</Phone>
                     </>
                 )
